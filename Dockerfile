@@ -5,6 +5,7 @@ ARG CLI_VERSION=1.16.134
 RUN apk -uv add --no-cache groff jq less && \
     pip install --no-cache-dir awscli==$CLI_VERSION
 
-COPY ecr-repo.sh .
+COPY ecr-repo.sh /opt/ecr-repo
+RUN chmod +x /opt/ecr-repo
 
-ENTRYPOINT ["./ecr-repo.sh"]
+ENTRYPOINT ["sh", "/opt/ecr-repo"]
