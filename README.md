@@ -3,10 +3,10 @@ AWS ECR command line tool
 
 This repository creates an image based on python and install the AWS CLI tool. 
 
-How to use this tool?
+## Usage
 
 ```
 docker pull jscruz/aws-ecr
-docker run jscruz/aws-ecr myrepository/blah
+docker run jscruz/aws-ecr myrepo [region]
 ```
-It will use the AWS credentials in the instance to check if you have
+The region parameter can be specified or it will use the same as the EC2 instance that is running as it uses the metadata of the instance.
