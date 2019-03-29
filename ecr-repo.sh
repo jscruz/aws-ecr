@@ -3,7 +3,7 @@
 if [ -z "$2" ]
   then
     echo "No region specified. Extracting from AWS EC2 metadata"
-    REGION=`curl http://169.254.169.254/latest/dynamic/instance-identity/document|grep region|awk -F\" '{print $4}'`
+    REGION=`curl -s http://169.254.169.254/latest/dynamic/instance-identity/document|grep region|awk -F\" '{print $4}'`
 else
     REGION="$2"
 fi
