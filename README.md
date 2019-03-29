@@ -1,5 +1,5 @@
-[![](https://images.microbadger.com/badges/image/jscruz/aws-ecr.svg)](https://microbadger.com/images/jscruz/aws-ecr "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/jscruz/aws-ecr.svg)](https://microbadger.com/images/jscruz/aws-ecr "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/jscruz/aws-ecr.svg)](https://hub.docker.com/r/jscruz/aws-ecr "Docker Hub")
+[![](https://images.microbadger.com/badges/version/jscruz/aws-ecr.svg)](https://hub.docker.com/r/jscruz/aws-ecr "Docker Hub")
 # aws-ecr
 AWS ECR command line tool
 
