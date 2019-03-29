@@ -7,4 +7,4 @@ RUN apk -uv add --no-cache groff jq less && \
 
 COPY ecr-repo.sh .
 
-ENTRYPOINT ecr-repo.sh
+ENTRYPOINT ["./ecr-repo.sh"]
