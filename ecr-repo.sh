@@ -13,4 +13,6 @@ aws ecr describe-repositories --region $REGION --repository-names $1 2>&1 > /dev
 status=$?
 if [[ ! "${status}" -eq 0 ]]; then
     aws ecr create-repository --region $REGION --repository-name $1
+else
+    echo "ECR Repository $1 already exists"
 fi
