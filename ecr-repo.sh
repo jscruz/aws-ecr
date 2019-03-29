@@ -8,6 +8,7 @@ else
     REGION="$2"
 fi
 
+echo "Region selected $REGION"
 aws ecr describe-repositories --region $REGION --repository-names $1 2>&1 > /dev/null
 status=$?
 if [[ ! "${status}" -eq 0 ]]; then
