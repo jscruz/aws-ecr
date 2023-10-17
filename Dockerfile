@@ -1,9 +1,9 @@
 FROM python:alpine
 
-ARG CLI_VERSION=1.18.32
-
-RUN apk -uv add --no-cache groff jq less curl && \
-    pip install --no-cache-dir awscli==$CLI_VERSION six urllib3
+RUN apk -uv add --no-cache groff jq less curl zip
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN ./aws/install
 
 COPY ecr-repo.sh /opt/ecr-repo
 RUN chmod +x /opt/ecr-repo
